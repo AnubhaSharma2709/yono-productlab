@@ -96,3 +96,26 @@ Repeat Usage Rate = Eligible feature users active on 2+ distinct days / Eligible
 - Handle missing data and duplicate records explicitly.
 - Validate KPI totals against the underlying SQL results.
 - Label all findings as synthetic-data results.
+
+
+## Seven-Day Activation Rate
+
+**Definition:** Percentage of eligible new users who complete onboarding and record at least one successful transaction within seven days of signup.
+
+**Formula:**
+
+Seven-Day Activation Rate = (Activated eligible users / Eligible users) × 100
+
+**Eligibility:** Users whose signup date allows a complete seven-day observation window within the simulation period, January 1–March 31, 2026.
+
+**Activation criteria:**
+- Onboarding completion occurs within seven days of signup.
+- At least one successful transaction occurs within seven days of signup.
+- Signup day is Day 0; the seven-day window ends at the same time-of-day boundary seven days later.
+
+**Current synthetic result:**
+- Eligible users: 4,714
+- Activated users: 1,594
+- Seven-day activation rate: 33.81%
+
+**Limitations:** This is a synthetic project result based on simulated user behaviour. It is not an actual SBI YONO metric. The result depends on the activation definition and the data-generation assumptions.
